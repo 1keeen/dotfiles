@@ -1,0 +1,31 @@
+colorscheme ron    " set color scheme
+set backspace=start,eol,indent  " enable to delete special character using backspace key
+set whichwrap=b,s,[,],<,>,~ 	" set wrapping of cursor
+set t_Co=256
+colorscheme ron                  "set color scheme
+syntax on                        " syntax highlight
+set number                       " show row numbers
+set nowrap                        " lines don't wrap
+set showmatch                   " hilight corresponding bracket
+set showmode                    " display current mode
+
+" Search --------------------
+set incsearch                   " incremental search
+set hlsearch                    " highlighting search matches
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+set wrapscan                    " searches wrap around the end of the file
+
+
+" Indent --------------------
+set tabstop=4                   " nunber of spaces that a <TAB> counts for
+set expandtab                   " replace <TAB> to spaces
+set shiftwidth=4                " shiftwidth in (auto)indent
+set softtabstop=4                " number of spaces that a <TAB> counts for while editing
+set autoindent                   " copy indent form current line when starting a new line
+set smartindent                " smart autoindenting when starting a new line
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%,space:･,
+"set listchars+=space:･,nbsp:･,tab:･
+set list
+"set listchars+=space:･
+
+autocmd FileType * setlocal formatoptions-=ro " prevent auto-comment

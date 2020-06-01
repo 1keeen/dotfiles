@@ -1,0 +1,62 @@
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/quickrun.vim
+'''
+on_ft = ['python','javascript']
+
+[[plugins]]
+repo = 'w0rp/ale'
+on_ft = ['python','javascript','html','vue','go']
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/ale.vim
+'''
+
+[[plugins]]
+repo = 'vim-scripts/Markdown'
+on_ft = ['markdown','mkd']
+on_i = 1
+
+[[plugins]]
+repo = 'suan/vim-instant-markdown'
+on_ft = ['markdown','mkd']
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+on_ft = ['markdown','mkd']
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
+on_i = 1
+
+
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+on_ft = ['javascript']
+
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/syntastic.vim
+'''
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+on_i = 1
+
+[[plugins]]
+repo = 'billyvg/tigris.nvim'
+on_ft = ['javascript', 'javascript.jsx']
+hook_post_update = '''
+  let g:dein#plugin.build = './install.sh'
+'''
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/tigris.vim
+'''
+
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript']
+

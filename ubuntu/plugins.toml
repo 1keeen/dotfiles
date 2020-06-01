@@ -1,0 +1,163 @@
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/denite.vim
+'''
+hook_source = ''' call denite#custom#source('file_old', 'matchers',
+      \ ['matcher_fuzzy', 'matcher_project_files'])
+call denite#custom#source('tag', 'matchers', ['matcher_substring'])
+if has('nvim')
+  call denite#custom#source('file_rec,grep', 'matchers',
+        \ ['matcher_cpsm'])
+endif
+call denite#custom#source('file_old', 'converters',
+      \ ['converter_relative_word'])
+'''
+hook_post_source = '''
+if executable('rg')
+  call denite#custom#var('file_rec', 'command',
+        \ ['rg', '--files', '--glob', '!.git'])
+  call denite#custom#var('grep', 'command', ['rg', '--threads', '1'])
+  call denite#custom#var('grep', 'recursive_opts', [])
+  call denite#custom#var('grep', 'final_opts', [])
+  call denite#custom#var('grep', 'separator', ['--'])
+  call denite#custom#var('grep', 'default_opts',
+          \ ['--vimgrep', '--no-heading'])
+else
+  call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nogroup', '-g', ''])
+  call denite#custom#var('grep', 'command', ['ag'])
+  call denite#custom#var('grep', 'recursive_opts', [])
+  call denite#custom#var('grep', 'pattern_opt', [])
+  call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group'])
+endif
+'''
+
+#[[plugins]]
+#repo = 'Shougo/unite.vim'
+#on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'kmnk/denite-dirmark'
+
+# unite.vim を読み込んだら一緒に読み込む
+[[plugins]]
+repo      = 'Shougo/neomru.vim'
+on_source = ['denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'ervandew/supertab'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+on_ft = ['python','javascript']
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/vim-airline.vim
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+
+[[plugins]]
+repo = 'simeji/winresizer'
+
+[[plugins]]
+repo = 'vimlab/split-term.vim'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/split-term.vim
+'''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+ 
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/fzf.vim
+'''
+
+[[plugins]]
+repo='neoclide/coc.nvim'
+rev = 'release'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/coc.nvim.vim
+'''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'cocopon/pgmnt.vim'
+
+[[plugins]]
+repo = 'guns/xterm-color-table.vim'
+
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'javascript.jsx', 'html']
+
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['javascript', 'vue']
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+hook_add = '''
+let g:closetag_filenames = '*.html,*.vue'
+'''
+
+[[plugins]]
+repo ='ekalinin/Dockerfile.vim'
+
+
+[[plugins]]
+repo ='fatih/vim-go'
+hook_add = '''
+source ~/.dotfiles/nvim/plugins/vim-go.vim
+'''
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'alampros/vim-styled-jsx'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'moll/vim-node'
+on_ft = ['javascript']
+
+#[[plugins]]
+#repo =  'mattn/emmet-vim'

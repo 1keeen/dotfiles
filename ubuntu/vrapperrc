@@ -1,0 +1,5 @@
+set hlsearch
+set ignorecase
+nnoremap <S-v> <C-v>
+nnoremap <C-v> <C-v>
+nnoremap <F1> :noh<CR>
