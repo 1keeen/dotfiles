@@ -24,6 +24,7 @@ let g:ale_linters = {
 let g:ale_fixers = {
       \ 'javascript': ['prettier'],
       \ 'vue': ['eslint'],
+      \ 'ruby': ['rubocop'],
       \ 'python': ['autopep8','black', 'isort'],
       \ 'markdown': [
       \   {buffer, lines -> {'command': 'textlint -c ~/.config/textlintrc -o /dev/null --fix --no-color --quiet %t', 'read_temporary_file': 1}}
@@ -35,7 +36,7 @@ let g:syntastic_python_flake8_args = '--ignore="E501","E722"'
 let g:python_autopep8_options = '--ignore "E731"'
 
 
-let g:ale_linter_aliases = {'vue': 'css'}
+let g:ale_linter_alias = {'vue': 'css'}
 
 let g:ale_fix_on_save = 1
 let g:ale_lint_on_enter = 0

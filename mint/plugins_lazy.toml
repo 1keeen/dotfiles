@@ -7,7 +7,7 @@ source ~/dotfiles/nvim/plugins/quickrun.vim
 
 [[plugins]]
 repo = 'w0rp/ale'
-on_ft = ['python','javascript','html','vue','go']
+on_ft = ['python','javascript','html','vue','go','ruby']
 hook_add = '''
 source ~/dotfiles/nvim/plugins/ale.vim
 '''
@@ -45,6 +45,10 @@ on_ft = ['javascript', 'javascript.jsx']
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 on_i = 1
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
 
 
 #[[plugins]]
