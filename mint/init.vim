@@ -29,6 +29,7 @@ if dein#load_state(s:dein_path)
   " TOML 読み込み
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#add('slim-template/vim-slim')
   call dein#recache_runtimepath()
   call dein#remote_plugins()
   call dein#end()
@@ -59,6 +60,9 @@ let g:python3_host_prog =  '/home/ken/.pyenv/shims/python3'
 
 "---jscomplete-vim---
 setl omnifunc=jscomplete#CompleteJS
+
+"---slim---
+autocmd BufNewFile,BufRead *.slim setlocal filetype=slim
 
 
 "--winresizer--

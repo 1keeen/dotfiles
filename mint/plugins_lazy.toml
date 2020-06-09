@@ -50,6 +50,9 @@ on_i = 1
 repo = 'tpope/vim-rails'
 on_ft = ['ruby']
 
+[[plungins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
 
 #[[plugins]]
 #repo = 'othree/yajs.vim'

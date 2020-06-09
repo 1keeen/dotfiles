@@ -141,6 +141,7 @@ source ~/dotfiles/nvim/plugins/vim-go.vim
 [[plugins]]
 repo =  'mattn/emmet-vim'
 
+
 #[[plugins]]
 #repo = 'vimlab/split-term.vim'
 #hook_add = '''
@@ -149,5 +150,3 @@ repo =  'mattn/emmet-vim'
 
 #[[plugins]]
 #repo = 'guns/xterm-color-table.vim'
-
-
