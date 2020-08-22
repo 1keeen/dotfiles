@@ -1,0 +1,74 @@
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_ft = ['python','javascript','go']
+hook_add = '''
+source ~/dotfiles/nvim/plugins/quickrun.vim
+'''
+
+[[plugins]]
+repo = 'w0rp/ale'
+on_ft = ['python','javascript','html','vue','go']
+hook_add = '''
+source ~/dotfiles/nvim/plugins/ale.vim
+'''
+#on_ft = ['python','javascript','html','vue','go', 'ruby']
+
+[[plugins]]
+repo = 'vim-scripts/Markdown'
+on_ft = ['markdown','mkd']
+on_i = 1
+
+[[plugins]]
+repo = 'suan/vim-instant-markdown'
+on_ft = ['markdown','mkd']
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
+on_ft = ['markdown','mkd']
+
+[[plugins]]
+repo = 'SirVer/ultisnips'
+on_i = 1
+
+
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+on_ft = ['javascript', 'javascript.jsx']
+
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+hook_add = '''
+source ~/dotfiles/nvim/plugins/syntastic.vim
+'''
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+on_i = 1
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
+
+#[[plugins]]
+#repo = "puremourning/vimspector"
+#on_ft = ["python", "javascript"]
+#build = "./install_gadget.py --enable-python --force-enable-node"
+
+
+[[plungins]]
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
+
+#[[plugins]]
+#repo = 'othree/yajs.vim'
+#on_ft = ['javascript', 'javascript.jsx']
+
+#[[plugins]]
+#repo = 'maxmellon/vim-jsx-pretty'
+#on_ft = ['javascript', 'javascript.jsx']
+#
+#[[plugins]]
+#repo = 'alampros/vim-styled-jsx'
+#on_ft = ['javascript', 'javascript.jsx']
