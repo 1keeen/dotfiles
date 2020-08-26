@@ -30,11 +30,9 @@ on_ft = ['markdown','mkd']
 repo = 'SirVer/ultisnips'
 on_i = 1
 
-
 [[plugins]]
 repo = 'heavenshell/vim-jsdoc'
 on_ft = ['javascript', 'javascript.jsx']
-
 
 [[plugins]]
 repo = 'scrooloose/syntastic'
@@ -44,22 +42,22 @@ source ~/dotfiles/nvim/plugins/syntastic.vim
 on_ft = ['javascript', 'javascript.jsx']
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
 on_i = 1
 
 [[plugins]]
-repo = 'tpope/vim-rails'
-on_ft = ['ruby']
+repo = 'cohama/lexima.vim'
+on_i = 1
 
 #[[plugins]]
 #repo = "puremourning/vimspector"
 #on_ft = ["python", "javascript"]
 #build = "./install_gadget.py --enable-python --force-enable-node"
 
-
-[[plungins]]
-repo = 'slim-template/vim-slim'
-on_ft = ['slim']
+#[[plungins]]
+#repo = 'slim-template/vim-slim'
+#on_ft = ['slim']
 
 #[[plugins]]
 #repo = 'othree/yajs.vim'

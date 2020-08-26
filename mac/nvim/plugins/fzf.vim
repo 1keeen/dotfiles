@@ -10,8 +10,8 @@ nnoremap <silent> [fzf]<C-a> :Ag
 
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
-  \ 'b': 'split',
-  \ 'v': 'vsplit' }
+  \ 'ctrl-b': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
 let g:fzf_layout = { 'window': 'enew' }
 

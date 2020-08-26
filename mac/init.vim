@@ -146,6 +146,7 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
 
 "-- terminal--
 noremap <silent> <C-[> <C-\><C-n>
+nnoremap <C-a> ^
 
 "---json--
 set conceallevel=0

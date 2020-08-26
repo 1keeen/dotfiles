@@ -1,4 +1,3 @@
-
 export LANG=ja_JP.UTF-8
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -162,6 +161,15 @@ setopt hist_no_store
 
 # ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
 bindkey '^R' history-incremental-pattern-search-backward
+# ctrl+oで次の単語に移動
+bindkey '^O' forward-word
+# ctrl+uで前の単語に移動
+bindkey '^U' backward-word
+# ctrl+dで次の単語を削除
+bindkey '^D' kill-word
+# ctrl+nで前の単語を削除
+bindkey '^N' backward-kill-word
+
 
 ########################################
 # エイリアス
@@ -194,8 +202,11 @@ alias sp="~/dotfiles/tmux.sh"
 
 # C で標準出力をクリップボードにコピーする
 if which pbcopy >/dev/null 2>&1 ; then
-    # Mac
-    alias -g C='| pbcopy'
+  alias -g C='| pbcopy'
+fi
+
+#--- ansible ----
+#export ANSIBLE_SSH_ARGS="-o ControlMaster=no"
 
 #-------python----------
 export PATH="${HOME}/.pyenv/bin:$PATH"
@@ -206,6 +217,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 #-------go----------
 export GOPATH=${HOME}/workspace/go
 export PATH=${PATH}:${GOPATH}/bin
+
+
 
 #-------ruby----------
 export PATH="${HOME}/.gem/jruby/1.8/bin:$PATH"
@@ -231,7 +244,7 @@ bindkey '^R' zaw-history
 bindkey '^w' zaw-cdr
 bindkey '^g' zaw-git-recent-branches
 #bindkey '^@' zaw-git-log
-bindkey '^s' zaw-git-status
+#bindkey '^s' zaw-git-status
 
 function up() {
     if [ $# -eq 0 ]; then
